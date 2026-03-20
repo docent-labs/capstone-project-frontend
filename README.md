@@ -73,7 +73,6 @@ capstone-project-frontend/
 │       └── hooks/
 │           ├── useDocumentUpload.test.ts # idle start, upload→polling, polling→ready, error, reset
 │           └── useChat.test.ts           # sendMessage adds messages, streaming updates in place
-├── tailwind.config.ts
 ├── postcss.config.mjs
 ├── vitest.config.ts
 ├── next.config.ts
