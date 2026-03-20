@@ -30,7 +30,7 @@ export async function uploadText(
   form.append("text", text);
   form.append("filename", filename);
 
-  const res = await fetch(`${API_URL}/api/documents/upload-text`, {
+  const res = await fetch(`${API_URL}/api/documents/upload`, {
     method: "POST",
     body: form,
   });
@@ -42,7 +42,7 @@ export async function uploadText(
 export async function getDocumentStatus(
   documentId: string,
 ): Promise<DocumentStatusResponse> {
-  const res = await fetch(`${API_URL}/api/documents/${documentId}/status`);
+  const res = await fetch(`${API_URL}/api/documents/${documentId}`);
   if (!res.ok) throw new Error(`Status check failed: ${res.status}`);
   return res.json();
 }
